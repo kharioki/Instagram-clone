@@ -26,7 +26,13 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  List<Widget> pages = [];
+  List<Widget> pages = [
+    HomePage(),
+    SearchPage(),
+    CreatePostPage(),
+    NotificationsPage(),
+    ProfilePage()
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -37,8 +43,33 @@ class _MyHomePageState extends State<MyHomePage> {
         appBar: AppBar(
           title: Text('Instagram'),
         ),
-        body: Center(
-          child: Column(),
+        body: TabBarView(
+          children: pages,
+        ),
+        bottomNavigationBar: Container(
+          margin: EdgeInsets.only(bottom: 20),
+          child: TabBar(
+            tabs: <Widget>[
+              Tab(
+                icon: Icon(Icons.home),
+              ),
+              Tab(
+                icon: Icon(Icons.search),
+              ),
+              Tab(
+                icon: Icon(Icons.add_circle_outline),
+              ),
+              Tab(
+                icon: Icon(Icons.notifications),
+              ),
+              Tab(
+                icon: Icon(Icons.perm_identity),
+              ),
+            ],
+            unselectedLabelColor: Colors.black,
+            labelColor: Colors.pinkAccent,
+            indicatorColor: Colors.transparent,
+          ),
         ),
       ),
     );
