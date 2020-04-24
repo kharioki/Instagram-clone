@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Instagram',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primaryColor: Colors.white,
       ),
       home: MyHomePage(),
     );
@@ -41,7 +41,10 @@ class _MyHomePageState extends State<MyHomePage> {
       initialIndex: 0,
       child: Scaffold(
         appBar: AppBar(
-          title: Text('Instagram'),
+          title: Text(
+            'Instagram',
+            style: TextStyle(color: Colors.black),
+          ),
         ),
         body: TabBarView(
           children: pages,
