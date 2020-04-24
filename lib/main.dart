@@ -4,6 +4,8 @@ import 'pages/notifications.dart';
 import 'pages/profile.dart';
 import 'pages/search.dart';
 import 'pages/create_post.dart';
+import 'package:instagramclone/models/global.dart';
+import 'models/appbar.dart';
 
 void main() => runApp(MyApp());
 
@@ -40,12 +42,6 @@ class _MyHomePageState extends State<MyHomePage> {
       length: 5,
       initialIndex: 0,
       child: Scaffold(
-        appBar: AppBar(
-          title: Text(
-            'Instagram',
-            style: TextStyle(color: Colors.black),
-          ),
-        ),
         body: TabBarView(
           children: pages,
         ),

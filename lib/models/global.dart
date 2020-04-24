@@ -48,7 +48,7 @@ User follower6 = new User('peter_griffin',
     AssetImage('lib/assets/profile4.png'), [], [], [], [], false);
 List<Post> userPosts = [
   new Post(
-      new AssetImage('lib/assets/photo_1.jpeg'),
+      new AssetImage('lib/assets/photo4.jpg'),
       user,
       "My first post",
       DateTime.now(),
@@ -80,7 +80,7 @@ List<Post> userPosts = [
       false,
       false),
   new Post(
-      new AssetImage('lib/assets/photo4.jpg'),
+      new AssetImage('lib/assets/photo_1.jpeg'),
       follower5,
       "How did I even take this photo??",
       DateTime.now(),
